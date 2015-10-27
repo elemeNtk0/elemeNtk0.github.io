@@ -47,9 +47,18 @@ $(document).ready(function() {
 
 
   $("#feedbackForm").validate({
-    errorClass: "invalid123",
+    focusCleanup: true,
+    focusInvalid: false,
+    errorClass: "validate__message",
+    errorElement: "div",
     validClass: "success",
-    errorContainer: ".validate"
+    errorContainer: ".validate",
+    highlight: function(element) {
+      $(element).addClass('feedback__control--invalid').removeClass('feedback__control--valid');
+    },
+    unhighlight: function(element) {
+      $(element).removeClass('feedback__control--invalid').addClass('feedback__control--valid');
+    }
   });
 
 }); //.doc-ready
