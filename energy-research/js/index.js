@@ -52,7 +52,7 @@ $(document).ready(function() {
     errorClass: "validate__message",
     errorElement: "div",
     validClass: "success",
-    errorContainer: ".validate",
+    // errorContainer: ".validate",
     highlight: function(element) {
       $(element).addClass('feedback__control--invalid').removeClass('feedback__control--valid');
     },
