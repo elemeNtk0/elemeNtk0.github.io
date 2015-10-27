@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>КОНТАКТЫ — ЦЭИ</title>
+  <meta name="viewport" content="width=1000">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__info">
+          <a href="#" class="header__logo">
+            <img src="../img/logo.png" height="86" width="187" alt="Центр Энергетических Исследований">
+          </a>
+  
+          <div class="header__slogan">
+            Центр энергетических исследований&nbsp;&mdash; опытные специалисты в&nbsp;области тепло-, электро- и&nbsp;водоснабжения
+          </div>
+  
+          <div class="header__feedback">
+            <div class="header__email">
+              <a href="mailto:info@energy-research.ru" class="link-blue">info@energy-research.ru</a>
+            </div>
+            <div class="call-me">
+              <a href="#" class="call-me__link  link-blue">заказать звонок</a>
+              <form action="#" method="POST" class="call-me__form  hidden">
+                <!-- ЗДЕСЬ БУДЕТ ФОРМА -->
+              </form>
+            </div>
+          </div>
+  
+          <div class="header__phone">8&nbsp;(932)&nbsp;50-99-13</div>
+        </div>
+  
+        <nav class="main-navigation">
+          <ul class="main-navigation__container">
+            <li class="active"><a href="#" class="main-navigation__link">Главная</a></li>
+            <li><a href="#" class="main-navigation__link">О компании</a></li>
+            <li><a href="#" class="main-navigation__link">Лицензии, сертификаты</a></li>
+            <li><a href="#" class="main-navigation__link">Наши проекты</a></li>
+            <li><a href="#" class="main-navigation__link">Партнёры</a></li>
+            <li><a href="#" class="main-navigation__link">Контакты</a></li>
+          </ul>
+        </nav>
+      </header>
+  <!-- partners.html -->
+
+    <main class="main-content">
+      <section class="main-content__container">
+        <ul class="breadcrumbs">
+          <li><a href="#">Главная</a></li>
+          <li>Контакты</li>
+        </ul>
+
+        <h1 class="h1">Контакты</h1>
+
+        <div class="contacts">
+          <div class="contacts__content">
+            <p><b>Адрес: 153000, г. Иваново, ул. Жиделёва, д. 35</b></p>
+            <p><b>Тел: +7 (4932) 50-99-13</b></p>
+            <p><b>Факс: +7 (4932) 58-60-16</b></p>
+            <p><b>Телефон в Москве +7 (800) 555-29-16</b></p>
+            <p><b>E-mail: </b><a href="mailto:info@energy-research.ru" class="link-blue">info@energy-research.ru</a></p>
+
+
+            <div class="contacts__map">
+              <img src="../img/map.jpg" alt="КАРТА БУДЕТ ПОТОМ!!!!1111аДын" height="716" width="1057">
+            </div>
+
+            <p><b>ООО «Центр энергетических исследований»</b>
+              <br>ИНН 3702641561
+              <br>ОГРН 1113702006021
+              <br>КПП 370201001
+            </p>
+            <p><b>ООО «Инновационный центр исследований энергетики»</b>
+              <br>ИНН 3702660363
+              <br>ОГРН 1113702034654
+              <br>КПП 370201001
+            </p>
+          </div>
+          <div class="contacts__form">
+            <div class="feedback">
+              <h3 class="feedback__title">Отправить сообщение:</h3>
+              <form class="feedback__form" action="" method="POST" id="feedbackForm">
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="fullName">Фамилия Имя Отчество:<sup>*</sup></label>
+                  <div class="feedback__control-wrap validate">
+                    <input class="feedback__control" type="text" id="fullName" name="fullName"
+                    data-rule-required="true"
+                    data-msg="Представьтесь,пожалуйста.">
+                  </div>
+                </div>
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="employeesPosition">Должность:</label>
+                  <div class="feedback__control-wrap">
+                    <input class="feedback__control" type="text" id="employeesPosition" name="employeesPosition">
+                  </div>
+                </div>
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="organizationName">Название организации:</label>
+                  <div class="feedback__control-wrap">
+                    <input class="feedback__control" type="text" id="organizationName" name="organizationName">
+                  </div>
+                </div>
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="email">E-mail:<sup>*</sup></label>
+                  <div class="feedback__control-wrap validate">
+                    <input class="feedback__control" type="text" id="email" name="email"
+                    data-rule-required="true"
+                    data-rule-email="true"
+                    data-msg-required="Для связи с Вами нужен email."
+                    data-msg-email="Укажите, пожалуйста, корректный email, в формате: name@domain.com">
+                  </div>
+                </div>
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="phoneNumber">Телефон:<sup>*</sup></label>
+                  <div class="feedback__control-wrap validate">
+                    <input class="feedback__control" type="text" id="phoneNumber" name="phoneNumber"
+                    data-rule-required="true"
+                    data-rule-number="true"
+                    data-msg-required="Оставьте свой телефон и мы вам перезвоним."
+                    data-msg-number="Укажите, пожалуйста, корректный номер телефона.">
+                  </div>
+                </div>
+                <div class="feedback__form-group">
+                  <label class="feedback__label" for="message">Сообщение:</label>
+                  <div class="feedback__control-wrap">
+                    <textarea class="feedback__control  feedback__control--textarea" id="message" name="message"></textarea>
+                  </div>
+                </div>
+                <div class="feedback__form-group  feedback__form-group--btn">
+                  <button class="feedback__btn-submit" type="submit">Отправить</button>
+                </div>
+              </form>
+              <p class="feedback__info">Мы свяжемся с вами в течение 1-го рабочего дня.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+        <!-- // partners.html -->
+
+    </div><!-- // .content -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="main-navigation  main-navigation--footer">
+          <ul class="main-navigation__container">
+            <li><a href="#" class="main-navigation__link">Главная</a></li>
+            <li><a href="#" class="main-navigation__link">О компании</a></li>
+            <li><a href="#" class="main-navigation__link">Лицензии, сертификаты</a></li>
+            <li><a href="#" class="main-navigation__link">Наши проекты</a></li>
+            <li><a href="#" class="main-navigation__link">Партнёры</a></li>
+            <li><a href="#" class="main-navigation__link">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__info">
+          <a href="#" class="footer__logo">
+            <img src="../img/logo--small.png" height="65" width="142" alt="Центр Энергетических Исследований">
+          </a>
+
+          <div class="footer__copyright">
+            Центр энергетических исследований
+            <br>г. Иваново, ул. Жиделева, д.35 &copy;&nbsp;2015
+          </div>
+
+          <div class="footer__email">
+            <a href="mailto:info@energy-research.ru" class="link-blue">info@energy-research.ru</a>
+          </div>
+
+          <div class="footer__phone">8&nbsp;(932)&nbsp;50-99-13</div>
+        </div>
+      </div>
+    </footer>
+  </div> <!-- // wrapper -->
+<!--   <script src="../vendor/jquery-1.11.3.min.js"></script>
+  <script src="../vendor/jquery.fancyBox.js"></script>
+  <script src="../vendor/slick.js"></script> -->
+
+  <script src="vendor/jquery-plugins.min.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
