@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>ПАРТНЁРЫ — ЦЭИ</title>
   <meta name="viewport" content="width=1000">
-  <link rel="stylesheet" href="template_styles.min.css">
+  <link rel="stylesheet" href="template_styles.css">
 </head>
 <body>
   <div class="wrapper">
@@ -23,11 +23,36 @@
             <div class="header__email">
               <a href="mailto:info@energy-research.ru" class="link-blue">info@energy-research.ru</a>
             </div>
-            <div class="call-me">
-              <a href="#" class="call-me__link  link-blue">заказать звонок</a>
-              <form action="#" method="POST" class="call-me__form  hidden">
-                <!-- ЗДЕСЬ БУДЕТ ФОРМА -->
-              </form>
+            <div class="call-me  feedback"  id="js-callMe">
+              <a href="#" class="call-me__link  link-blue" id="js-btnCallMe">заказать звонок</a>
+  
+              <div class="call-me__content  hidden" id="js-callMeContent">
+                <h3 class="feedback__title  feedback__title--small">Заказать звонок:</h3>
+                <form action="#" method="POST" class="call-me__form feedback" id="js-callMeForm">
+                  <div class="feedback__form-group">
+                    <label class="feedback__label" for="callMeName">Имя:<sup>*</sup></label>
+                    <div class="feedback__control-wrap validate">
+                      <input class="feedback__control" type="text" id="callMeName" name="callMeName"
+                      data-rule-required="true"
+                      data-msg="Представьтесь, пожалуйста.">
+                    </div>
+                  </div>
+                  <div class="feedback__form-group">
+                    <label class="feedback__label" for="callMePhoneNumber">Телефон:<sup>*</sup></label>
+                    <div class="feedback__control-wrap validate">
+                      <input class="feedback__control" type="text" id="callMePhoneNumber" name="callMePhoneNumber"
+                      data-rule-required="true"
+                      data-rule-number="true"
+                      data-msg-required="Оставьте свой телефон и мы вам перезвоним."
+                      data-msg-number="Укажите, пожалуйста, корректный номер телефона.">
+                    </div>
+                  </div>
+                  <div class="feedback__form-group  feedback__form-group--btn">
+                    <button class="feedback__btn-submit" type="submit">Отправить запрос</button>
+                  </div>
+                  <p class="feedback__info">Мы перезвоним вам в ближайшее время.</p>
+                </form>
+              </div>
             </div>
           </div>
   
@@ -118,6 +143,7 @@
       </div>
     </footer>
   </div> <!-- // wrapper -->
+  <div class="overlay  overlay--off" id="js-overlay"></div>
 <!--   <script src="../vendor/jquery-1.11.3.min.js"></script>
   <script src="../vendor/jquery.fancyBox.js"></script>
   <script src="../vendor/slick.js"></script> -->
