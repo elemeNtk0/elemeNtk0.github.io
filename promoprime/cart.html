@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <link rel="apple-touch-icon-precomposed" sizes="192x192" href="./favicon-192.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="./favicon-180.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="./favicon-152.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./favicon-144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="./favicon-120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./favicon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="96x96" href="./favicon-96.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="./favicon-76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="./favicon-60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="58x58" href="./favicon-58.png">
+  <link rel="apple-touch-icon-precomposed" sizes="32x32" href="./favicon-32.png">
+  <link rel="shortcut icon" href="./favicon.png">
+  <title>Корзина — PromoPrime</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- подтягиваем хедерчик -->
+  <header class="header" id="top">
+    <div class="container">
+      <div class="header__top  row">
+        <div class="col--xs-9">
+          <ul class="header__sub-navigation">
+            <li><a href="#">Интересное</a></li>
+            <li><a href="#">Частые вопросы</a></li>
+            <li><a href="#">Полезные материалы</a></li>
+            <li><a href="#">Наши бренды</a></li>
+            <li><a href="#">Доставка в регионы</a></li>
+            <li><a href="#">Бриф Promo Prime</a></li>
+          </ul>
+        </div>
+        <!--
+        Вот и нет личного кабинета
+        <div class="col--xs-3">
+          <div class="header__sign">
+            <div class="header__sign-panel">
+              <a href="#" class="header__sign-in  icon_lock">Войти</a>
+              <span class="header__sing-separator">/</span>
+              <a href="#" class="header__sign-up">Регистрация</a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+  
+  
+      <div class="header__panel  header-panel" id="js-stickyPanel">
+        <div class="container  container--wide">
+          <div class="row">
+            <div class="col--xs-5">
+              <div class="header-panel__left-col">
+                <a href="index.html" class="header-panel__logo" title="на Главную">
+                  <img src="./img/main-logo.png" height="37" width="254" alt="Promo Prime">
+                </a>
+                <div class="header-panel__slogan">Реклама на подарках&nbsp;и&nbsp;сувенирах</div>
+              </div>
+            </div>
+            <div class="col--xs-7">
+              <div class="header-panel__right-col">
+                <div class="header-panel__contact-area  header-contacts">
+                  <div class="header-contacts__work-hours">с&nbsp;10:00 до&nbsp;19:00, Пн-П</div>
+                  <div class="header-contacts__phone">+7&nbsp;(495)&nbsp;926-49-46</div>
+                  <div class="header-contacts__callback-area">
+                    <a href="#callBackPopup" class="js-magnificPopup  btn btn--callback"  id="js-btnCallBack" data-effect="mfp-zoom-in">Обратный звонок</a>
+                  </div>
+                </div>
+                <div class="header-panel__cart-area  header-cart">
+                  <a href="#" class="header-cart__link  icon_cart" title="Перейти в корзину"><span>3</span></a>
+                  <div class="header-cart__min-price">
+                    15 000 руб. <a class="js-magnificPopup  icon_min-price" href="#minPricePopup"  id="js-btnMinPrice" data-effect="mfp-zoom-in">мин. заказ</a>
+                  </div>
+                  <div class="header-cart__cost">999 999 руб.</div>
+                </div>
+                <div class="header-panel__btn-area">
+                  <a href="#" class="btn" title="Перейти к оформлению">Оформить</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Памятка: сюда вставляем блок .main-catalog,
+              вместо класса .main-navigation__catalog-menu
+              класс .header__catalog -->
+        </div>
+      </div> <!-- // .header-panel -->
+  
+  
+      <div class="main-navigation">
+        <div class="main-navigation__catalog-link" data-id="mainNavCatLink">
+          <button class="btn  btn--hamburger" id="js-btnHamburger" type="button"><span></span><b>Каталог товаров</b></button>
+        </div>
+  
+        <ul class="main-navigation__menu">
+          <li class="main-navigation__item  main-navigation__item--event">
+            <a class="main-navigation__link" href="#">Корпоративные ивенты</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Компания</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Услуги</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Портфолио</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Интересное</a>
+          </li>
+          <li class="main-navigation__item">
+            <a class="main-navigation__link" href="#">Контакты</a>
+          </li>
+        </ul>
+        <button class="main-navigation__btn-search  btn  btn--search  icon_search" id="js-btnSearch" type="button">Открыть панель поиска</button>
+  
+        <div class="main-navigation__catalog-menu  main-catalog  icon_main-catalog-triange  -hidden" id="js-mainCatalog">
+          <div class="row  row--collapsed  row--v-offset">
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Одежда</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Футболки</a></li>
+                  <li><a href="#">Майки</a></li>
+                  <li><a href="#">Бейсболки, козырьки, панамы</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+  
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Отдых и туризм</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Спортинвентарь</a></li>
+                  <li><a href="#">Пикник и барбекю</a></li>
+                  <li><a href="#">Игры и развлечения</a></li>
+                  <li><a href="#">Гамаки и кресла</a></li>
+                  <li><a href="#">Пляжные принадлежности</a></li>
+                  <li><a href="#">Мячи</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Бизнес и офис</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Канцтовары</a></li>
+                  <li><a href="#">Календари</a></li>
+                  <li><a href="#">Подарочные наборы</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Часы и погодные станции</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Настенные часы</a></li>
+                  <li><a href="#">Наручные часы</a></li>
+                  <li><a href="#">Настольные часы</a></li>
+                  <li><a href="#">Дорожные и карманные часы</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Кухни и бар</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Посуда</a></li>
+                  <li><a href="#">Кружки и чашки</a></li>
+                  <li><a href="#">Термосы, термокружки</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Антистресс</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Игрушки антистресс</a></li>
+                  <li><a href="#">Головоломки</a></li>
+                  <li><a href="#">Настольные антистрессы</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+  
+          <div class="row  row--collapsed  row--v-offset">
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Брелоки</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Оригинальные брелоки</a></li>
+                  <li><a href="#">Стандартные брелоки</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">и ещё 5 позиций...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Зонты</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Зонты-трости</a></li>
+                  <li><a href="#">Складные зонты</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">и ещё 5 позиций...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Дом и быт</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Пледы</a></li>
+                  <li><a href="#">Аксессуары для курения</a></li>
+                  <li><a href="#">Предметы интерьера</a></li>
+                  <li><a href="#">Шкатулки</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Личные вещи и аксессуары</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Уход за собой</a></li>
+                  <li><a href="#">Промо-аксессуары</a></li>
+                  <li><a href="#">Очки и аксессуары к ним</a></li>
+                  <li><a href="#">Аптечка</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">и ещё 7 позиций...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Ежедневники</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Планинги</a></li>
+                  <li><a href="#">Блокноты</a></li>
+                  <li><a href="#">Телефонные книжки</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col col--xs-2">
+              <div class="main-catalog__group">
+                <a href="#" class="main-catalog__group-name">Сумки</a>
+                <ul class="main-catalog__list">
+                  <li><a href="#">Спортивные сумки</a></li>
+                  <li><a href="#">Рюкзаки</a></li>
+                  <li><a href="#">Багажные бирки</a></li>
+                  <li><a class="main-catalog__more-link  link-blue" href="#">Ещё 21 позиция...</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div> <!-- // .main-catalog -->
+  
+        <div class="search-panel  -hidden" id="js-searchPanel">
+          <form class="search-panel__form  form  form--inline" action="#" method="POST">
+            <div class="form__group">
+              <div class="form__input-group">
+                <input type="text" class="form__control  form__control--wide  form__control--alt" placeholder="Наименование товара" id="searchPanelProductName" name="searchPanelProductName">
+              </div>
+            </div>
+  
+            <div class="form__group">
+              <label for="searchPanelPriceFrom" class="form__label">Цена от:</label>
+              <input type="text" class="form__control  form__control--alt  form__control--small" placeholder="0 р." id="searchPanelPriceFrom" name="searchPanelPriceFrom">
+            </div>
+            <div class="form__group">
+              <label for="searchPanelPriceTo" class="form__label">до:</label>
+              <input type="text" class="form__control  form__control--alt  form__control--small" placeholder="100 000 р." id="searchPanelPriceTo" name="searchPanelPriceTo">
+            </div>
+            <div class="form__group">
+              <label for="searchPanelResidue" class="form__label">остаток:</label>
+              <input type="text" class="form__control  form__control--alt  form__control--small" placeholder="0 р."  id="searchPanelResidue" name="searchPanelResidue">
+            </div>
+            <div class="form__group">
+              <a class="search-panel__link" href="#" >Расширенный поиск</a>
+            </div>
+            <button class="btn  btn--search-close  search-panel__close" type="button" id="js-btnSearchPanelClose">Х</button>
+            <button class="btn  btn--search-panel  search-panel__submit  icon_search-white" type="submit">Найти</button>
+          </form>
+        </div>
+      </div>
+  
+      <hr class="purple">
+  
+      <div class="sub-navigation">
+        <ul class="sub-navigation__table">
+          <li class="sub-navigation__cell"><a href="#">Технические требования к макетам</a></li>
+          <li class="sub-navigation__cell"><a href="#">Запросы для поиска сувенира менеджерами</a></li>
+          <li class="sub-navigation__cell"><a href="#">Прайс по сборке и сортировке</a></li>
+          <li class="sub-navigation__cell"><a href="#">Важная информация для клиента</a></li>
+        </ul>
+      </div>
+    </div>
+    <a href="#top" class="cd-top">Наверх</a>
+  </header>
+
+
+  <div class="container">
+    <div class="breadcrumbs">
+      <ul class="breadcrumbs__list">
+        <li><a href="#">Главная</a></li>
+        <li>Ваша корзина</li>
+      </ul>
+
+    </div>
+    <main class="main-content">
+      <h1 class="h1">Ваша корзина</h1>
+
+
+
+      <div class="row ">
+        <div class="col col--xs-9">
+          <form action="#"  method="POST" class="cart   form">
+
+            <div class="cart__item">
+              <div class="cart__cell  cart__cell--img">
+                <a href="#" class="cart__img-wrap">
+                  <img src="./img/cart-item-img1.png" height="56" width="72" alt="" class="cart__img">
+                </a>
+              </div>
+              <div class="cart__cell  cart__cell--characteristics">
+                <a href="#" class="cart__item-name">USB BONE FLASH ( USB 3.0) на 4 Гб</a>
+                <div class="cart__item-info">
+                  <span>Артикул: <b>1114437.34</b></span>
+                  <a href="#" class="cart__item-protip  protip" data-pt-title="Материал: кожа<br>Размер: 6,5 х 2 х 2 см<br>Способ нанесения: гравировка, шелкография" data-pt-width="500">Характеристики</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--price"><b>12 740</b> руб.</div>
+              <div class="cart__cell  cart__cell--actions">
+                <div class="cart__item-actions">
+                  <a href="#" class="cart__item-action">-</a>
+                  <input  type="text" class="cart__item-count" value="15">
+                  <a href="#" class="cart__item-action">+</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--summary"><b>216 580</b> руб.</div>
+              <div class="cart__cell  cart__cell--delete">
+                <a href="#" class="cart__item-delete">Удалить</a>
+              </div>
+            </div>
+            <div class="cart__fake-row"></div>
+
+            <div class="cart__item">
+              <div class="cart__cell  cart__cell--img">
+                <a href="#" class="cart__img-wrap">
+                  <img src="./img/cart-item-img2.png" height="66" width="63" alt="" class="cart__img">
+                </a>
+              </div>
+              <div class="cart__cell  cart__cell--characteristics">
+                <a href="#" class="cart__item-name">Флеш-карта «Елочка» USB 8 Гб</a>
+                <div class="cart__item-info">
+                  <span>Артикул: <b>1114437.34</b></span>
+                  <a href="#" class="cart__item-protip  protip" data-pt-title="Материал: кожа<br>Размер: 6,5 х 2 х 2 см<br>Способ нанесения: гравировка, шелкография" data-pt-width="500">Характеристики</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--price"><b>12 740</b> руб.</div>
+              <div class="cart__cell  cart__cell--actions">
+                <div class="cart__item-actions">
+                  <a href="#" class="cart__item-action">-</a>
+                  <input  type="text" class="cart__item-count" value="2">
+                  <a href="#" class="cart__item-action">+</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--summary"><b>216 580</b> руб.</div>
+              <div class="cart__cell  cart__cell--delete">
+                <a href="#" class="cart__item-delete">Удалить</a>
+              </div>
+            </div>
+            <div class="cart__fake-row"></div>
+
+            <div class="cart__item">
+              <div class="cart__cell  cart__cell--img">
+                <a href="#" class="cart__img-wrap">
+                  <img src="./img/cart-item-img3.png" height="54" width="47" alt="" class="cart__img">
+                </a>
+              </div>
+              <div class="cart__cell  cart__cell--characteristics">
+                <a href="#" class="cart__item-name">Флеш-карта «Елочка» USB 8 Гб</a>
+                <div class="cart__item-info">
+                  <span>Артикул: <b>1114437.34</b></span>
+                  <a href="#" class="cart__item-protip  protip" data-pt-title="Материал: кожа<br>Размер: 6,5 х 2 х 2 см<br>Способ нанесения: гравировка, шелкография" data-pt-width="500">Характеристики</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--price"><b>12 740</b> руб.</div>
+              <div class="cart__cell  cart__cell--actions">
+                <div class="cart__item-actions">
+                  <a href="#" class="cart__item-action">-</a>
+                  <input  type="text" class="cart__item-count" value="2">
+                  <a href="#" class="cart__item-action">+</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--summary"><b>216 580</b> руб.</div>
+              <div class="cart__cell  cart__cell--delete">
+                <a href="#" class="cart__item-delete">Удалить</a>
+              </div>
+            </div>
+            <div class="cart__fake-row"></div>
+
+            <div class="cart__item">
+              <div class="cart__cell  cart__cell--img">
+                <a href="#" class="cart__img-wrap">
+                  <img src="./img/cart-item-img3.png" height="54" width="47" alt="" class="cart__img">
+                </a>
+              </div>
+              <div class="cart__cell  cart__cell--characteristics">
+                <a href="#" class="cart__item-name">Флеш-карта «Елочка» USB 8 Гб</a>
+                <div class="cart__item-info">
+                  <span>Артикул: <b>1114437.34</b></span>
+                  <a href="#" class="cart__item-protip  protip" data-pt-title="Материал: кожа<br>Размер: 6,5 х 2 х 2 см<br>Способ нанесения: гравировка, шелкография" data-pt-width="500">Характеристики</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--price"><b>12 740</b> руб.</div>
+              <div class="cart__cell  cart__cell--actions">
+                <div class="cart__item-actions">
+                  <a href="#" class="cart__item-action">-</a>
+                  <input  type="text" class="cart__item-count" value="2">
+                  <a href="#" class="cart__item-action">+</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--summary"><b>216 580</b> руб.</div>
+              <div class="cart__cell  cart__cell--delete">
+                <a href="#" class="cart__item-delete">Удалить</a>
+              </div>
+            </div>
+            <div class="cart__fake-row"></div>
+
+            <div class="cart__item">
+              <div class="cart__cell  cart__cell--img">
+                <a href="#" class="cart__img-wrap">
+                  <img src="./img/cart-item-img3.png" height="54" width="47" alt="" class="cart__img">
+                </a>
+              </div>
+              <div class="cart__cell  cart__cell--characteristics">
+                <a href="#" class="cart__item-name">Флеш-карта «Елочка» USB 8 Гб</a>
+                <div class="cart__item-info">
+                  <span>Артикул: <b>1114437.34</b></span>
+                  <a href="#" class="cart__item-protip  protip" data-pt-title="Материал: кожа<br>Размер: 6,5 х 2 х 2 см<br>Способ нанесения: гравировка, шелкография" data-pt-width="500">Характеристики</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--price"><b>12 740</b> руб.</div>
+              <div class="cart__cell  cart__cell--actions">
+                <div class="cart__item-actions">
+                  <a href="#" class="cart__item-action">-</a>
+                  <input  type="text" class="cart__item-count" value="2">
+                  <a href="#" class="cart__item-action">+</a>
+                </div>
+              </div>
+              <div class="cart__cell  cart__cell--summary"><b>216 580</b> руб.</div>
+              <div class="cart__cell  cart__cell--delete">
+                <a href="#" class="cart__item-delete">Удалить</a>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+        <div class="col col--xs-3">
+          <div class="panel-right">
+            <div class="panel-right__top">
+              <div class="panel-right__summary">Всего <b>118 товаров</b> на сумму:</div>
+              <div class="panel-right__summary-cost">280 000 руб.</div>
+              <a href="#" class="btn  btn--block">Оформить заказ</a>
+            </div>
+            <div class="panel-right__middle">
+              <p><b>Внимание!</b><br>Стоимость нанесения логотипа ориентировочная и просчитывается окончательно только после предоставления макета в векторном виде в формате Corel Draw.</p>
+              <p><b>Возможны дополнительные расходы:</b></p>
+              <ul class="simple-list">
+                <li>Доставка</li>
+                <li>Изготовление пилотного образца</li>
+                <li>Отрисовка логотипа в Corel Draw</li>
+              </ul>
+            </div>
+            <div class="panel-right__bottom">
+              <p>Звоните, мы расскажем больше</p>
+              <div class="panel-right__phone  icon_phone-gray">8&nbsp;(495)&nbsp;926-49-46</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+  <!-- Подтягиваем подвальчик -->
+  <footer class="footer">
+    <div class="container container--big">
+  
+      <hr class="purple">
+  
+      <div class="container">
+        <div class="support">
+          <div class="support__phone">Служба поддержки 8&nbsp;(495)&nbsp;926-49-46</div>
+          <div class="support__opening-hours">С&nbsp;понедельника по&nbsp;пятницу с&nbsp;10:00 до&nbsp;19:00 по&nbsp;Московскому времени</div>
+        </div>
+      </div>
+  
+      <hr class="purple">
+  
+  
+      <div class="container">
+        <div class="footer__info  row ">
+          <div class="col col--xs-5">
+            <div class="subscribe">
+              <div class="subscribe__container">
+                <div class="subscribe__sub-title">Подпишись и узнай первым</div>
+                <div class="subscribe__title">О скидках и акциях</div>
+  
+                <form class="form  form--inline  subscribe__form" action="#" method="POST">
+                  <div class="form__group  form__group--full-width">
+                    <div class="form__input-group">
+                      <input type="text" class="form__control" placeholder="Ваш E-mail...">
+                      <div class="form__input-addon">
+                        <button class="btn btn--input  icon_mail" type="submit"></button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+  
+                <div class="subscribe__remark">Введите несколько адресов через запятую</div>
+              </div>
+            </div>
+          </div>
+          <div class="col col--xs-6  col--xs-offset-1">
+            <div class="footer-menu  footer__links  row">
+              <div class="col col--xs-4">
+                <h3 class="footer-menu__title">Помощь</h3>
+                <ul class="footer-menu__list">
+                  <li><a href="#">Доставка товара</a></li>
+                  <li><a href="#">Способ оплаты</a></li>
+                  <li><a href="#">Публичная оферта</a></li>
+                  <li><a href="#">Где купить?</a></li>
+                </ul>
+              </div>
+              <div class="col col--xs-4">
+                <h3 class="footer-menu__title">О компании</h3>
+                <ul class="footer-menu__list">
+                  <li><a href="#">Кто мы</a></li>
+                  <li><a href="#">Карта сайта</a></li>
+                  <li><a href="#">Почему мы</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="col col--xs-4">
+                <h3 class="footer-menu__title">Популярное</h3>
+                <ul class="footer-menu__list">
+                  <li><a href="#">Подарки на Новый Год</a></li>
+                  <li><a href="#">Подарки для мужчин</a></li>
+                  <li><a href="#">Подарки для женщин</a></li>
+                </ul>
+              </div>
+            </div>
+  
+            <div class="row  social-contacts">
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--vk">Vkontakte</a>
+              </div>
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--fb">Facebook</a>
+              </div>
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--in">Instagram</a>
+              </div>
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--tw">Twitter</a>
+              </div>
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--livej">Livejornal</a>
+              </div>
+              <div class="col col--xs-2">
+                <a href="#" class="social-contacts__link  icon_social  icon_social--tumblr">tumblr</a>
+              </div>
+            </div>
+          </div>
+        </div><!-- // .footer-info -->
+  
+  
+        <hr class="purple purple--small">
+        <div class="footer__bottom">
+          <div class="row">
+            <div class="col col--xs-8">
+              <div class="copyright-block">
+                <p><b>&copy;&nbsp;2015 Promo&nbsp;prime | Реклама на подарках и сувенирах</b></p>
+                <p>Цены на сайте не являются публичной офертой. Уточняйте цены и наличие продукции у менеджеров.</p>
+              </div>
+            </div>
+            <div class="col col--xs-4">
+              Здесь иконки с подсчетом поделившихся
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  
+  
+  <div id="callBackPopup" class="popup  popup--callback  mfp-with-anim  mfp-hide" >
+    <div class="popup__callback-title">Обратный звонок</div>
+    <p class="popup__callback-text">Укажите свой контактный телефон, и мы перезвоним вам в ближайшие несколько минут:</p>
+  
+    <form class="form" action="#" method="POST" id="js-callBackForm">
+      <div class="form__group  form__group--full-width">
+        <div class="validate">
+          <input type="text" class="form__control  form__control--alt" placeholder="+7(___)__-__-__"
+          data-rule-required="true"
+          data-rule-number="true"
+          data-msg-required="Оставьте свой телефон и мы вам перезвоним."
+          data-msg-number="Укажите, пожалуйста, корректный номер телефона."
+          aria-required="true"
+          >
+        </div>
+      </div>
+      <div class="form__group form__group--full-width">
+        <button class="btn  btn--block" type="submit">Я жду звонка</button>
+      </div>
+    </form>
+  </div>
+  
+  
+  
+  <div id="minPricePopup" class="popup  popup--min-price  mfp-with-anim  mfp-hide" >
+    <div class="popup__price-title">15 000 <span>руб.</span></div>
+    <div class="popup__price-subtitle">Минимальный заказ без учета нанесения логотипа и доставки</div>
+  
+    <ul class="popup__price-list">
+      <li class="icon_caret-left-gray">При минимальной сумме заказа на&nbsp;50&nbsp;000 руб., минимальная сумма одного артикула —&nbsp;10&nbsp;000 pуб.</li>
+      <li class="icon_caret-left-gray">Минимальный заказ одного артикула со склада в&nbsp;Европе —&nbsp;1 экспортная коробка.</li>
+      <li class="icon_caret-left-gray">Мы работаем только с юридическими лицами по безналичному расчету.</li>
+    </ul>
+  
+  </div>
+  
+  
+  
+  <div id="addCartPopup" class="popup  popup--add-cart  mfp-with-anim  mfp-hide" >
+    <div class="popup__cart-title"><span class="icon_cart-white"></span>Добавлено в корзину</div>
+  
+    <div class="popup__cart-item">
+      <div class="popup__cart-img-wrap">
+        <img src="./img/cart-item-img1.png" alt="">
+      </div>
+      <div class="popup__cart-item-name">Тут динамически подгружается название</div>
+    </div>
+  
+    <div class="popup__cart-links">
+      <a href="#" class="btn  btn--medium-large  btn--continue">Продолжить покупки</a>
+      <a href="#" class="btn  btn--medium-large">Перейти в корзину</a>
+    </div>
+  
+  </div>
+
+
+
+
+  <!-- Подключаем скрипты для сайта везде -->
+  <!-- Исходники лежат в папке /front/src/vendor/ -->
+  <script src="./jquery-1.11.3.min.js"></script>
+  <script src="./vendor/jquery-plugins.min.js"></script>
+  
+  <!-- Исходники лежат в папке /front/src/js/ -->
+  <!-- Сначала забираем все из /app затем в конец к ним приклеивается index.js, который и будет  -->
+  <script src="./js/index.js"></script>
+</body>
+</html>
