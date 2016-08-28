@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Что ты знаешь Джон сноу!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Базовое название стилей в шаблоне битрикса -->
+  <link rel="stylesheet" href="template_styles.css">
+
+
+</head>
+<body class="layout  layout--main-page">
+  <!-- Шапка сайта -->
+  <header class="header">
+    <div class="header__container">
+      <a class="header__logo" href="" alt="На главную">
+        <img src="img/logo-takagro.svg" width="169" height="98" alt="">
+      </a>
+  
+      <div class="header__menu">
+        <div class="main-menu" id="js-mainMenu">
+          <button class="main-menu__btn" id="js-mainMenuBtn" title="Показать/Скрыть меню"><span>Показать/скрыть меню</span></button>
+  
+          <nav class="main-menu__container">
+            <a href="#" class="main-menu__link">
+              <img src="img/i_menu-1.svg" alt="" width="36"> Техника
+            </a>
+            <a href="#" class="main-menu__link">
+              <img src="img/i_menu-2.svg" alt="" width="34"> Запчасти
+            </a>
+            <a href="#" class="main-menu__link">
+              <img src="img/i_menu-3.svg" alt="" width="32"> Сервис
+            </a>
+            <a href="#" class="main-menu__link">
+              <img src="img/i_menu-4.svg" alt="" width="36"> Финансы
+            </a>
+            <a href="#" class="main-menu__link">
+              <img src="img/i_menu-5.svg" alt="" width="34"> Контакты
+            </a>
+          </nav>
+        </div>
+      </div>
+  
+      <div class="header__contacts  contacts-block">
+        <div class="contacts-block__title">Звоните по любым вопросам</div>
+        <div class="contacts-block__phone  contacts-block__phone--top">
+          <p>8(4934) 32-16-39</p>
+          <p>8(4934) 32-28-80</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- index.html  -->
+  <div class="promo">
+    <h1 class="promo__title">Сельскохозяйственные машины и оборудование</h1>
+    <span class="promo__subtitle">С любовью к земле и людям!</span>
+  </div>
+
+
+  <main class="layout__content  main-content">
+    <div class="container">
+      <section class="box">
+        <h2 class="page-title  page-title--level2">Специальные предложения</h2>
+
+        <div class="grid">
+
+          <div class="grid__cell 1/2--lap-and-up">
+            <article class="item-card  item-card--big   item-card--best-price  box">
+              <a href="#" class="item-card__photo">
+                <span style="background-image: url('img/tractor1--big.jpg');"></span>
+              </a>
+              <h3 class="item-card__name">Трактор Kubota</h3>
+              <p class="item-card__prev-text">Доступны модификации данной модели с колесными формулами 4х2 и 4х4, что позволяет подобрать трактор для выполнения нужного спектра работ и условий эксплуатации.</p>
+              <a href="#" class="btn">Подробнее</a>
+            </article>
+          </div>
+
+          <div class="grid__cell 1/2--lap-and-up">
+            <div class="grid">
+              <div class="grid__cell 1/2--handheld-and-up">
+                <article class="item-card  box">
+                  <a href="#" class="item-card__photo">
+                    <span style="background-image: url('img/tractor-JohnDeere.png');"></span>
+                  </a>
+                  <h3 class="item-card__name">Трактор John Deere</h3>
+                  <p class="item-card__prev-text">Доступны модификации данной модели с колесными формулами 4х2 и 4х4, что позволяет подобрать трактор для выполнения нужного спектра работ и условий эксплуатации.</p>
+                  <a href="#" class="btn">Подробнее</a>
+                </article>
+              </div>
+
+              <div class="grid__cell 1/2--handheld-and-up">
+                <article class="item-card">
+                  <a href="#" class="item-card__photo">
+                    <span style="background-image: url('img/tractor-CaseIH.png');"></span>
+                  </a>
+                  <h3 class="item-card__name">Трактор Case IH</h3>
+                  <p class="item-card__prev-text">Доступны модификации данной модели с колесными формулами 4х2 и 4х4.</p>
+                  <a href="#" class="btn">Подробнее</a>
+                </article>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="box  box--big-top">
+        <h2 class="page-title  page-title--section">Наши партнёры</h2>
+
+        <div class="js-partners  partners  slick-slider--partners">
+          <div class="partners__slide">
+            <img src="img/partner1.png" width="238" height="52">
+          </div>
+          <div class="partners__slide">
+            <img src="img/partner2.png">
+          </div>
+          <div class="partners__slide">
+            <img src="img/partner3.png">
+          </div>
+          <div class="partners__slide">
+            <img src="img/partner4.png">
+          </div>
+          <div class="partners__slide">
+            <img src="img/partner4.png">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- // index.html  -->
+
+
+
+  <!-- // подвал сайта  -->
+  <footer class="footer">
+    <div class="container">
+  
+      <div class="footer__container">
+        <a class="footer__logo" href="" alt="На главную">
+          <img src="img/logo-takagro.svg" width="169" height="98" alt="">
+        </a>
+  
+  
+        <ul class="footer__menu">
+          <li><a href="#" class="footer__menu-link">Каталог</a></li>
+          <li><a href="#" class="footer__menu-link">Запчасти</a></li>
+          <li><a href="#" class="footer__menu-link">Сервис</a></li>
+          <li><a href="#" class="footer__menu-link">Финансы</a></li>
+          <li><a href="#" class="footer__menu-link">Контакты</a></li>
+        </ul>
+  
+  
+        <div class="footer__contacts  contacts-block">
+          <div class="contacts-block__title">Звоните по любым вопросам</div>
+          <div class="contacts-block__phone  contacts-block__phone--top">
+            <p>8(4934) 32-16-39</p>
+            <p>8(4934) 32-28-80</p>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </footer>
+  <!-- Подключаем скрипты (скомпилированные jQ скрипты и следом скрипты приложения) -->
+  <script src="vendor/jquery-plugins.min.js"></script>
+  <script src="js/index.js"></script>
+  
+  
+  <script src="js-helpers/tableOfPages.js"></script>
+  <script>
+    tableOfPages.init({
+      "index": "Home",
+      "catalog": "Каталог 1лв",
+      "catalog-lv2": "Каталог 2лв",
+      "finance": "Финансы",
+      "parts": "Запчасти",
+      "contacts": "Контакты",
+    });
+  </script>
+</body>
+</html>
