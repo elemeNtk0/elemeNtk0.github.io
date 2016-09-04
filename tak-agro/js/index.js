@@ -108,7 +108,6 @@ var tabs = (function() {
 
 $(document).ready(function() {
 
-
   $('.js-partners').slick({
     autoplay: false,
     arrows: true,
@@ -146,8 +145,45 @@ $(document).ready(function() {
 
   $('.js-tabs').length && tabs.init();
 
+  function productSlideInit() {
+    var productSlider = $('#js-product-slider').lightSlider({
+      gallery: true,
+      controls: false,
+      item: 1,
+      loop: false,
+      slideMargin: 0,
+      thumbMargin: 30,
+      thumbItem: 3, useCss: true,
+    });
+
+    $('#btnPoductSliderPrev').on('click', function () {
+      productSlider.goToPrevSlide();
+    });
+    $('#btnPoductSliderNext').on('click', function () {
+      productSlider.goToNextSlide();
+    });
+  }
+  var sliderActivation = 0;
+
+  if ($('.js-hidden-slider').css('display') == 'none')
+    $('.js-tabsHiddenSlider').on('click', function () {
+      if (sliderActivation >= 1) $('#js-product-slider').refresh;
+      else productSlideInit();
+      // $('#js-product-slider').rebuild;
+      sliderActivation++;
+    });
+  else productSlideInit();
+
+
+  $(window).resize(function() {
+    $('#js-product-slider').refresh;
+  });
 
 }); //.doc-ready
+
+
+
+
 
 
 
